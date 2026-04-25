@@ -1,0 +1,17 @@
+public class Solution 
+{
+    public int TitleToNumber(string columnTitle) 
+    {
+        columnTitle = columnTitle.ToUpper();
+        int colNum = 0;
+
+        for (int i = 0; i <= columnTitle.Length - 1; i++) 
+        {
+            colNum *= 26;
+        
+            colNum += (columnTitle[i] - 'A' + 1);
+        }
+
+        return colNum;
+    }
+}
