@@ -1,0 +1,29 @@
+public class Solution 
+{
+    public int Reverse(int x) 
+    {
+        string num = x.ToString();
+        string revNum = "";
+        if (num[0] != '-') 
+        {
+            for (int i = num.Length - 1; i >= 0; i--) 
+            {
+                revNum += num[i];
+            }
+            
+            int.TryParse(revNum, out int rNum);
+            return rNum;
+        }
+        else 
+        {
+            for (int i = num.Length - 1; i > 0; i--) 
+            {
+                revNum += num[i];
+            }
+
+            int.TryParse(revNum, out int rNum);
+            return -rNum;
+        }        
+
+    }
+}
