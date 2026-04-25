@@ -1,0 +1,16 @@
+public class Solution 
+{
+    public string ConvertToTitle(int columnNumber) 
+    {
+        string colTitle = "";
+
+        while (columnNumber > 0)
+        {
+            int mod = (columnNumber - 1) % 26;
+            colTitle = (char)('A' + mod) + colTitle;
+            columnNumber = (columnNumber - mod) / 26;
+        }
+
+        return colTitle;
+    }
+}
